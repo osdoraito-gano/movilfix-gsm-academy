@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react';
 import Header from '../sections/Header';
 import AnnouncementBanner from '../sections/AnnouncementBanner';
 import HeroSlider from '../sections/HeroSlider';
+import LearningPath from "../sections/LearningPath";
+import InstructorSection from "../sections/InstructorSection";
 import FeaturedCourses from '../sections/FeaturedCourses';
 import Testimonials from '../sections/Testimonials';
 import Footer from '../sections/Footer';
 import WhatsAppWidget from '../components/WhatsAppWidget';
-import LearningPath from "../sections/LearningPath";
 import Instructor from "../sections/Instructor";
+
 
 const HomePage = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -30,10 +32,11 @@ const HomePage = () => {
       <main>
         <HeroSlider />
         <LearningPath />
+        <InstructorSection />
         <FeaturedCourses onAddToCart={addToCart} />
-        <Instructor />
         <Testimonials />
         <AboutSection />
+        <Instructor />
       </main>
 
       <Footer />
