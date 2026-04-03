@@ -11,6 +11,7 @@ import Footer from '../sections/Footer';
 import WhatsAppWidget from '../components/WhatsAppWidget';
 import Instructor from "../sections/Instructor";
 import FreeCourse from "../sections/FreeCourse";
+import TechnicianMindset from "../sections/TechnicianMindset";
 
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
 
       <main>
         <HeroSlider />
+        <TechnicianMindset />
         <LearningPath />
         <FreeCourse />
         <InstructorSection />
