@@ -1,71 +1,51 @@
 import { Button } from "@/components/ui/button";
-import { BookOpen, Cpu, Zap, Wrench } from "lucide-react";
 
 const FreeCourse = () => {
   return (
-    <section className="bg-slate-950 text-white py-24">
+    <section className="bg-slate-800 py-24 text-white">
+      <div className="max-w-6xl mx-auto px-6 text-center">
 
-      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-6">
+          Curso Gratuito de Diagnóstico Electrónico
+        </h2>
 
-        {/* Titulo */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Curso Gratuito de Reparación de Celulares
-          </h2>
+        <p className="text-slate-300 max-w-3xl mx-auto mb-10 text-lg">
+          Antes de aprender a cambiar piezas, aprende a comprender
+          la electrónica que hay detrás de cada circuito.
+          Descarga gratis mi guía fundamental y comienza a pensar
+          como un técnico real.
+        </p>
 
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Comienza desde cero aprendiendo los fundamentos de la electrónica
-            aplicada a la reparación móvil. Entiende cómo funcionan los
-            circuitos antes de comenzar a reparar.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
 
-        {/* Contenido */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-            <BookOpen className="w-10 h-10 text-cyan-400 mx-auto mb-4"/>
-            <h3 className="font-semibold mb-2">Mentalidad del Técnico</h3>
-            <p className="text-slate-400 text-sm">
-              Aprende la diferencia entre cambiar piezas y diagnosticar fallas.
+          <div className="bg-slate-900 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-2">Ebook Profesional</h3>
+            <p className="text-slate-400">
+              Fundamentos de electrónica aplicados a reparación móvil.
             </p>
           </div>
 
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-            <Zap className="w-10 h-10 text-cyan-400 mx-auto mb-4"/>
-            <h3 className="font-semibold mb-2">Corriente y Voltaje</h3>
-            <p className="text-slate-400 text-sm">
-              Comprende cómo fluye la energía dentro de un circuito.
+          <div className="bg-slate-900 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-2">Diagnóstico Real</h3>
+            <p className="text-slate-400">
+              Aprende a interpretar voltajes, resistencias y fallas.
             </p>
           </div>
 
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-            <Cpu className="w-10 h-10 text-cyan-400 mx-auto mb-4"/>
-            <h3 className="font-semibold mb-2">Componentes Electrónicos</h3>
-            <p className="text-slate-400 text-sm">
-              Identifica resistencias, capacitores y su función real.
-            </p>
-          </div>
-
-          <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 text-center">
-            <Wrench className="w-10 h-10 text-cyan-400 mx-auto mb-4"/>
-            <h3 className="font-semibold mb-2">Uso del Multímetro</h3>
-            <p className="text-slate-400 text-sm">
-              Aprende a medir correctamente dentro de un circuito.
+          <div className="bg-slate-900 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-2">Sesión 1 a 1</h3>
+            <p className="text-slate-400">
+              Posibilidad de una charla de orientación técnica de 20 minutos.
             </p>
           </div>
 
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Button className="bg-cyan-500 hover:bg-cyan-600 text-white px-10 py-6 text-lg font-semibold">
-            Acceder al Curso Gratis
-          </Button>
-        </div>
+        <Button className="bg-red-500 hover:bg-red-600 text-white px-10 py-6 text-lg">
+          Descargar Curso Gratuito
+        </Button>
 
       </div>
-
     </section>
   );
 };

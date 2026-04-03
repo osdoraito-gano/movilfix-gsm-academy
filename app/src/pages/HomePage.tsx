@@ -10,6 +10,7 @@ import Testimonials from '../sections/Testimonials';
 import Footer from '../sections/Footer';
 import WhatsAppWidget from '../components/WhatsAppWidget';
 import Instructor from "../sections/Instructor";
+import FreeCourse from "../sections/FreeCourse";
 
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
       <main>
         <HeroSlider />
         <LearningPath />
+        <FreeCourse />
         <InstructorSection />
         <FeaturedCourses onAddToCart={addToCart} />
         <Testimonials />
