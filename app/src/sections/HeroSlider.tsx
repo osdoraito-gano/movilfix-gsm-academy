@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 const HeroSlider = () => {
   return (
@@ -56,3 +57,4 @@ const HeroSlider = () => {
 };
 
 export default HeroSlider;
+<ScrollIndicator />

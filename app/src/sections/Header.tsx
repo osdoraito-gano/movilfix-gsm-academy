@@ -1,13 +1,9 @@
 import logo from "../assets/logo-movilfix.png";
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, Sparkles, Store, Users, Newspaper, Link2, ShoppingCart } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from '../components/ui/sheet';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, Sparkles, Store, Users, Newspaper, Link2, ShoppingCart } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 
 interface HeaderProps {
   cartCount: number;
@@ -29,16 +25,16 @@ const Header = ({ cartCount }: HeaderProps) => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks: NavLink[] = [
-    { label: 'Curso Gratis', href: '/curso-gratis' },
-    { label: 'Curso Premium', href: '/curso-premium', icon: Sparkles, highlight: true },
-    { label: 'Tienda Online', href: '/tienda', icon: Store },
-    { label: 'Sobre Nosotros', href: '#about', icon: Users },
-    { label: 'News', href: '#news', icon: Newspaper },
+    { label: "Curso Gratis", href: "/curso-gratis" },
+    { label: "Curso Premium", href: "/curso-premium", icon: Sparkles, highlight: true },
+    { label: "Tienda Online", href: "/tienda", icon: Store },
+    { label: "Sobre Nosotros", href: "#about", icon: Users },
+    { label: "News", href: "#news", icon: Newspaper },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -47,8 +43,8 @@ const Header = ({ cartCount }: HeaderProps) => {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg'
-          : 'bg-slate-900'
+          ? "bg-slate-900/95 backdrop-blur-md shadow-lg"
+          : "bg-slate-900"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,9 +52,11 @@ const Header = ({ cartCount }: HeaderProps) => {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
-              <img src={logo} alt="MovilFix GSM Academy" className="h-10 w-auto" />
-            </div>
+            <img
+              src={logo}
+              alt="MovilFix GSM Academy"
+              className="h-10 w-auto"
+            />
 
             <div className="flex flex-col">
               <span className="text-white font-bold text-lg leading-tight">
@@ -78,10 +76,10 @@ const Header = ({ cartCount }: HeaderProps) => {
                 to={link.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
                   isActive(link.href)
-                    ? 'bg-cyan-500/20 text-cyan-400'
+                    ? "bg-cyan-500/20 text-cyan-400"
                     : link.highlight
-                    ? 'text-white hover:bg-white/10'
-                    : 'text-slate-300 hover:text-white hover:bg-white/10'
+                    ? "text-white hover:bg-white/10"
+                    : "text-slate-300 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
@@ -140,12 +138,11 @@ const Header = ({ cartCount }: HeaderProps) => {
                       to={link.href}
                       className={`py-2 px-4 rounded-lg transition-colors flex items-center gap-2 ${
                         isActive(link.href)
-                          ? 'bg-cyan-500/20 text-cyan-400'
-                          : 'text-slate-300 hover:text-white hover:bg-white/10'
+                          ? "bg-cyan-500/20 text-cyan-400"
+                          : "text-slate-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
                       {link.icon && <link.icon className="w-4 h-4" />}
-
                       {link.label}
                     </Link>
                   ))}
