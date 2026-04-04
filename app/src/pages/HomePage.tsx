@@ -12,6 +12,8 @@ import WhatsAppWidget from '../components/WhatsAppWidget';
 import Instructor from "../sections/Instructor";
 import FreeCourse from "../sections/FreeCourse";
 import TechnicianMindset from "../sections/TechnicianMindset";
+import TechParticles from "../components/TechParticles";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 
 const HomePage = () => {
@@ -28,11 +30,14 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen tech-grid">
+      <TechParticles />
       <AnnouncementBanner />
       <Header cartCount={cartCount} />
+     
 
       <main>
         <HeroSlider />
+        <ScrollIndicator />
         <TechnicianMindset />
         <LearningPath />
         <FreeCourse />
