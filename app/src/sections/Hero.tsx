@@ -2,6 +2,7 @@ import { Wrench, Smartphone, GraduationCap } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 import ScrollIndicator from "../components/ScrollIndicator";
+import DiagnosticPanel from "../components/DiagnosticPanel";
 
 const Hero = () => {
   return (
@@ -61,13 +62,16 @@ const Hero = () => {
           </div>
 
         </div>
+        
 
       </div>
 
       {/* Indicador de scroll */}
       <ScrollIndicator />
-
+        <DiagnosticPanel />
     </section>
+    
+
   );
 };
 
