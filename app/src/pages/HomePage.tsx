@@ -2,7 +2,6 @@ import AboutSection from "@/sections/AboutSection";
 import { useState, useEffect } from 'react';
 import Header from '../sections/Header';
 import AnnouncementBanner from '../sections/AnnouncementBanner';
-import HeroSlider from '../sections/HeroSlider';
 import LearningPath from "../sections/LearningPath";
 import InstructorSection from "../sections/InstructorSection";
 import FeaturedCourses from '../sections/FeaturedCourses';
@@ -13,7 +12,6 @@ import Instructor from "../sections/Instructor";
 import FreeCourse from "../sections/FreeCourse";
 import TechnicianMindset from "../sections/TechnicianMindset";
 import TechParticles from "../components/TechParticles";
-import ScrollIndicator from "../components/ScrollIndicator";
 import Hero from "../sections/Hero";
 
 
@@ -40,8 +38,6 @@ const HomePage = () => {
       <main>
         <Hero />
         <TechParticles />
-        <HeroSlider />
-        <ScrollIndicator />
         <TechnicianMindset />
         <LearningPath />
         <FreeCourse />
