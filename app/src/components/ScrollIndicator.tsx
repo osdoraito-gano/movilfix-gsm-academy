@@ -4,18 +4,21 @@ const ScrollIndicator = () => {
   const scrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
   return (
-    <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
       <button
         onClick={scrollDown}
-        className="flex flex-col items-center text-cyan-400 hover:text-cyan-300 transition"
+        className="flex flex-col items-center text-cyan-400 hover:text-cyan-300 transition duration-300"
       >
-        <span className="text-xs mb-1">Descubre más</span>
-        <ChevronDown size={30} />
+        <span className="text-xs tracking-wide uppercase mb-1 opacity-80">
+          Descubre más
+        </span>
+
+        <ChevronDown size={28} />
       </button>
     </div>
   );
