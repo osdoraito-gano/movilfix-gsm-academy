@@ -1,27 +1,44 @@
 import { ChevronDown } from "lucide-react";
 
 const ScrollIndicator = () => {
+
   const scrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 
   return (
-    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+
+    <div className="absolute bottom-10 right-8 flex flex-col items-center">
+
       <button
         onClick={scrollDown}
-        className="flex flex-col items-center text-cyan-400 hover:text-cyan-300 transition duration-300"
+        className="group flex flex-col items-center text-cyan-400 hover:text-cyan-300 transition"
       >
-        <span className="text-xs tracking-wide uppercase mb-1 opacity-80">
-          Descubre más
+
+        <span className="text-xs tracking-widest mb-2 opacity-80 group-hover:opacity-100">
+          SCROLL
         </span>
 
-        <ChevronDown size={28} />
+        <div className="w-8 h-14 border-2 border-cyan-400 rounded-full flex justify-center relative">
+
+          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-bounce"></div>
+
+        </div>
+
+        <ChevronDown
+          size={20}
+          className="mt-2 animate-bounce"
+        />
+
       </button>
+
     </div>
+
   );
+
 };
 
 export default ScrollIndicator;

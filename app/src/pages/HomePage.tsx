@@ -9,6 +9,7 @@ import FeaturedCourses from "../sections/FeaturedCourses";
 import InstructorSection from "../sections/InstructorSection";
 import AboutSection from "../sections/AboutSection";
 import Footer from "../sections/Footer";
+import IndustryProblem from "../sections/IndustryProblem";
 
 import TechParticles from "../components/TechParticles";
 import WhatsAppWidget from "../components/WhatsAppWidget";
@@ -38,6 +39,9 @@ const HomePage = () => {
 
         {/* HERO */}
         <Hero />
+
+        {/* Problemas de la industria */}
+        <IndustryProblem />
 
         {/* Partículas tecnológicas */}
         <TechParticles />
