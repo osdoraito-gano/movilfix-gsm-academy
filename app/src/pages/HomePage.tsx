@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../sections/Header";
 import AnnouncementBanner from "../sections/AnnouncementBanner";
 import Hero from "../sections/Hero";
+import MyStory from "../sections/MyStory";
 import LearningPath from "../sections/LearningPath";
 import FreeCourse from "../sections/FreeCourse";
 import FeaturedCourses from "../sections/FeaturedCourses";
@@ -10,6 +11,7 @@ import InstructorSection from "../sections/InstructorSection";
 import AboutSection from "../sections/AboutSection";
 import Footer from "../sections/Footer";
 import IndustryProblem from "../sections/IndustryProblem";
+
 
 import TechParticles from "../components/TechParticles";
 import WhatsAppWidget from "../components/WhatsAppWidget";
@@ -42,6 +44,9 @@ const HomePage = () => {
 
         {/* Problemas de la industria */}
         <IndustryProblem />
+
+        {/* Historia del instructor */}
+       <MyStory />
 
         {/* Partículas tecnológicas */}
         <TechParticles />

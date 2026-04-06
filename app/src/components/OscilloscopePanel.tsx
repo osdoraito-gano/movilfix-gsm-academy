@@ -3,32 +3,53 @@ import { motion } from "framer-motion";
 const OscilloscopePanel = () => {
 
   const path =
-    "M0 70 L10 70 L10 30 L30 30 L30 70 L50 70 L50 30 L70 30 L70 70 L90 70 L90 30 L100 30";
+    "M0 70 L10 70 L10 30 L25 30 L25 70 L40 70 L40 30 L55 30 L55 70 L70 70 L70 30 L85 30 L85 70 L100 70";
 
   return (
-    <div className="mt-12 max-w-xl mx-auto bg-slate-900/70 border border-cyan-500/20 rounded-lg p-4 backdrop-blur shadow-lg">
+    <div className="mt-16 max-w-2xl mx-auto bg-slate-900/80 border border-cyan-400/30 rounded-xl p-2 shadow-xl backdrop-blur">
 
-      <div className="text-xs text-cyan-400 mb-2 text-center">
-        Señal digital monitoreada
+      {/* encabezado */}
+      <div className="flex justify-between text-xs text-slate-400 mb-3">
+        <span>OSCILOSCOPIO</span>
+        <span>Señal digital</span>
       </div>
 
-      <svg viewBox="0 0 100 100" className="w-full h-24">
+      <div className="relative">
 
-        <motion.path
-          d={path}
-          fill="transparent"
-          stroke="#22d3ee"
-          strokeWidth="2"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "linear"
+        {/* grid */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(#22d3ee 1px, transparent 1px), linear-gradient(90deg,#22d3ee 1px, transparent 1px)",
+            backgroundSize: "25px 25px",
           }}
         />
 
-      </svg>
+        <svg viewBox="0 0 100 100" className="w-full h-24">
+
+          <motion.path
+            d={path}
+            fill="transparent"
+            stroke="#057f9288"
+            strokeWidth="3"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+
+        </svg>
+
+      </div>
+
+      <div className="flex justify-between text-xs text-slate-500 mt-2">
+        <span>5ms</span>
+        <span>2V/div</span>
+      </div>
 
     </div>
   );

@@ -9,7 +9,7 @@ import CircuitBackground from "../components/CircuitBackground";
 
 const Hero = () => {
   return (
-    <section className="relative py-24 px-6">
+    <section className="relative py-20 px-6">
 
       <CircuitBackground />
 
