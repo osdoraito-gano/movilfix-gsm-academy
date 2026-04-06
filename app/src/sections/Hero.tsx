@@ -3,12 +3,14 @@ import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 import ScrollIndicator from "../components/ScrollIndicator";
 import DiagnosticPanel from "../components/DiagnosticPanel";
+import CircuitBackground from "../components/CircuitBackground";
 
 const Hero = () => {
   return (
     <section className="relative py-28 px-6 text-center">
+      <CircuitBackground />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto">
 
         {/* Título */}
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
