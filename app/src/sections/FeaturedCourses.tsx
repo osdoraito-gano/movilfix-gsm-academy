@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Star, Clock, Users, Play, Check, ShoppingCart, Sparkles, Zap, Crown } from 'lucide-react';
+import { Star, Clock, Users, Play, Check, ShoppingCart, Sparkles, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -74,23 +74,7 @@ const courses: Course[] = [
     icon: Crown,
     link: '/curso-premium',
   },
-  {
-    id: 4,
-    title: 'Curso Presencial Intensivo',
-    description: 'Formación práctica presencial con equipos reales y expertos',
-    price: 499,
-    originalPrice: 799,
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=250&fit=crop',
-    duration: '5 días',
-    students: 850,
-    rating: 4.9,
-    lessons: 50,
-    features: ['Material incluido', 'Kit de herramientas', 'Certificado físico', 'Almuerzo incluido'],
-    badge: 'PRESENCIAL',
-    badgeColor: 'bg-rose-500',
-    icon: Zap,
-    link: '#presencial',
-  },
+  // Curso Presencial eliminado (ID 4) - Academia 100% digital
 ];
 
 interface FeaturedCoursesProps {
@@ -124,8 +108,8 @@ const FeaturedCourses = ({ onAddToCart }: FeaturedCoursesProps) => {
           </p>
         </div>
 
-        {/* Courses Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Courses Grid - Ajustado a 3 columnas para pantallas grandes */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => {
             const Icon = course.icon;
             const isExternal = course.link.startsWith('#');

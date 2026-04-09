@@ -7,7 +7,6 @@ import MyStory from "../sections/MyStory";
 import LearningPath from "../sections/LearningPath";
 import FreeCourse from "../sections/FreeCourse";
 import FeaturedCourses from "../sections/FeaturedCourses";
-import InstructorSection from "../sections/InstructorSection";
 import AboutSection from "../sections/AboutSection";
 import Footer from "../sections/Footer";
 import IndustryProblem from "../sections/IndustryProblem";
@@ -42,26 +41,23 @@ const HomePage = () => {
         {/* HERO */}
         <Hero />
 
+        {/* Curso gratis */}
+        <FreeCourse />
+
         {/* Problemas de la industria */}
         <IndustryProblem />
-
-        {/* Historia del instructor */}
-       <MyStory />
 
         {/* Partículas tecnológicas */}
         <TechParticles />
 
-        {/* Ruta de aprendizaje */}
-        <LearningPath />
-
-        {/* Curso gratis */}
-        <FreeCourse />
-
         {/* Cursos destacados */}
         <FeaturedCourses onAddToCart={addToCart} />
 
-        {/* Instructor */}
-        <InstructorSection />
+        {/* Historia del instructor */}
+        <MyStory />
+
+       {/* Ruta de aprendizaje */}
+        <LearningPath />     
 
         {/* Sobre la academia */}
         <AboutSection />

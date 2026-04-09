@@ -33,6 +33,11 @@ const Hero = () => {
             reparación de placas con lógica técnica.
           </p>
 
+          <p className="text-sm text-slate-400 mt-4">
+            Creado por <span className="text-cyan-400 font-semibold">Luis Gomez</span>,
+            técnico en reparación de celulares con más de 15 años de experiencia.
+          </p>
+
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
 
             <Link to="/curso-gratis">

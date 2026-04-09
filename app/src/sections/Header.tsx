@@ -30,14 +30,17 @@ const Header = ({ cartCount }: HeaderProps) => {
   }, []);
 
   const navLinks: NavLink[] = [
-    { label: "Curso Gratis", href: "/curso-gratis" },
-    { label: "Curso Premium", href: "/curso-premium", icon: Sparkles, highlight: true },
+    { label: "Cursos Gratis", href: "/curso-gratis" },
+    { label: "Cursos Premium", href: "/curso-premium", icon: Sparkles, highlight: true },
     { label: "Tienda Online", href: "/tienda", icon: Store },
-    { label: "Sobre Nosotros", href: "#about", icon: Users },
-    { label: "News", href: "#news", icon: Newspaper },
+    { label: "Sobre Nosotros", href: "/sobre-nosotros", icon: Users },
+    { label: "Blog", href: "/blog", icon: Newspaper },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path === "/") return location.pathname === path;
+    return location.pathname === path;
+  };
 
   return (
     <header
@@ -57,7 +60,6 @@ const Header = ({ cartCount }: HeaderProps) => {
               alt="MovilFix GSM Academy"
               className="h-10 w-auto"
             />
-
             <div className="flex flex-col">
               <span className="text-white font-bold text-lg leading-tight">
                 MovilFix GSM
@@ -83,7 +85,6 @@ const Header = ({ cartCount }: HeaderProps) => {
                 }`}
               >
                 {link.label}
-
                 {link.icon && (
                   <link.icon className="w-3 h-3 text-yellow-400" />
                 )}
@@ -100,11 +101,9 @@ const Header = ({ cartCount }: HeaderProps) => {
               className="relative p-2 text-slate-300 hover:text-white transition-colors flex items-center gap-2"
             >
               <ShoppingCart className="w-5 h-5" />
-
               <span className="text-sm font-medium hidden sm:inline">
                 $0.00
               </span>
-
               {cartCount > 0 && (
                 <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {cartCount}
@@ -112,10 +111,15 @@ const Header = ({ cartCount }: HeaderProps) => {
               )}
             </Link>
 
-            {/* Connect Button */}
-            <Button className="hidden sm:flex bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 font-semibold hover:from-yellow-300 hover:to-orange-400">
-              <Link2 className="w-4 h-4 mr-2" />
-              Conectar
+            {/* Connect Button - Ahora apunta a la página de acceso */}
+            <Button 
+              asChild
+              className="hidden sm:flex bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 font-semibold hover:from-yellow-300 hover:to-orange-400"
+            >
+              <Link to="/acceso">
+                <Link2 className="w-4 h-4 mr-2" />
+                Conectar
+              </Link>
             </Button>
 
             {/* Mobile Menu */}
@@ -131,7 +135,6 @@ const Header = ({ cartCount }: HeaderProps) => {
                 className="bg-slate-900 border-slate-800 w-72"
               >
                 <div className="flex flex-col gap-4 mt-8">
-
                   {navLinks.map((link) => (
                     <Link
                       key={link.label}
@@ -146,7 +149,6 @@ const Header = ({ cartCount }: HeaderProps) => {
                       {link.label}
                     </Link>
                   ))}
-
                   <Link
                     to="/carrito"
                     className="py-2 px-4 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-colors flex items-center gap-2"
@@ -154,12 +156,12 @@ const Header = ({ cartCount }: HeaderProps) => {
                     <ShoppingCart className="w-4 h-4" />
                     Carrito ({cartCount})
                   </Link>
-
-                  <Button className="mt-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 font-semibold">
-                    <Link2 className="w-4 h-4 mr-2" />
-                    Conectar
+                  <Button asChild className="mt-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 font-semibold">
+                    <Link to="/acceso">
+                      <Link2 className="w-4 h-4 mr-2" />
+                      Conectar
+                    </Link>
                   </Button>
-
                 </div>
               </SheetContent>
             </Sheet>
